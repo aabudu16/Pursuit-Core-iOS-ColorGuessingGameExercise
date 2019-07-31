@@ -87,6 +87,15 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74y-13-a7U">
                                 <rect key="frame" x="0.0" y="243" width="414" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3z-NC-j4Z">
+                                        <rect key="frame" x="138" y="60" width="138" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -97,6 +106,7 @@
                         <outlet property="RGBColorView" destination="74y-13-a7U" id="HjE-hX-ldP"/>
                         <outlet property="blueOutlet" destination="uQD-TT-6cy" id="u8r-FL-m4p"/>
                         <outlet property="currentScore" destination="m3p-ZP-i7M" id="pn5-vh-vFF"/>
+                        <outlet property="emojiLabel" destination="F3z-NC-j4Z" id="NvG-ip-X9u"/>
                         <outlet property="gameOver" destination="fGd-3d-ukb" id="lbF-Jx-4TS"/>
                         <outlet property="greenOutlet" destination="IoD-k5-n3w" id="WO1-zU-4EU"/>
                         <outlet property="highScore" destination="yVO-H5-9WA" id="0I7-v1-Sii"/>

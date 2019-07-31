@@ -15,6 +15,7 @@ struct RGBValue {
     var green = Double.random(in: 0.0...1.0)
     let alpha = 1.0
     
+    
   func creatRGBColor() -> UIColor{
    return UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha) )
     }
@@ -26,24 +27,7 @@ struct RGBValue {
     }
 }
 
+var currentHighestRBGValue = RGBValue()
+ var high = currentHighestRBGValue.highestRGBvalue()
 
 
-//func disableButtons(){
-//
-//}
-//  var colorGenerated = RGBValue()
-//
-//func dfgdgdg(){
-//    switch colorGenerated.highestRGBvalue() {
-//    case colorGenerated.red:
-//        if colorGenerated.red == colorGenerated.highestRGBvalue() {
-//            highscore += 1
-//        } else  {
-//            currentscore = 0
-//            disableButtons()
-//        }
-//    case colorGenerated.blue:
-//    case colorGenerated.green
-//        
-//    }
-//}

@@ -16,6 +16,7 @@
 		85919E5D22F0CFFA0054BC42 /* colorGuesingGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85919E5C22F0CFFA0054BC42 /* colorGuesingGameUITests.swift */; };
 		85FD130222F0D2B0002330FA /* RGB-Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD130122F0D2B0002330FA /* RGB-Value.swift */; };
 		85FD130422F0EBE4002330FA /* incrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD130322F0EBE4002330FA /* incrementer.swift */; };
+		85FD130622F1205F002330FA /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD130522F1205F002330FA /* Emojis.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		85919E5E22F0CFFA0054BC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85FD130122F0D2B0002330FA /* RGB-Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RGB-Value.swift"; sourceTree = "<group>"; };
 		85FD130322F0EBE4002330FA /* incrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = incrementer.swift; sourceTree = "<group>"; };
+		85FD130522F1205F002330FA /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				85919E4022F0CFF80054BC42 /* Main.storyboard */,
 				85FD130322F0EBE4002330FA /* incrementer.swift */,
 				85FD130122F0D2B0002330FA /* RGB-Value.swift */,
+				85FD130522F1205F002330FA /* Emojis.swift */,
 				85919E4322F0CFFA0054BC42 /* Assets.xcassets */,
 				85919E4522F0CFFA0054BC42 /* LaunchScreen.storyboard */,
 				85919E4822F0CFFA0054BC42 /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				85FD130422F0EBE4002330FA /* incrementer.swift in Sources */,
 				85919E3F22F0CFF80054BC42 /* ViewController.swift in Sources */,
+				85FD130622F1205F002330FA /* Emojis.swift in Sources */,
 				85919E3D22F0CFF80054BC42 /* AppDelegate.swift in Sources */,
 				85FD130222F0D2B0002330FA /* RGB-Value.swift in Sources */,
 			);

@@ -12,12 +12,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var redOutlet: UIButton!
     @IBOutlet weak var blueOutlet: UIButton!
     
+    @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var greenOutlet: UIButton!
     @IBOutlet weak var highScore: UILabel!
     @IBOutlet weak var newGame: UIButton!
     
     @IBOutlet weak var gameOver: UILabel!
     @IBOutlet weak var currentScore: UILabel!
+    var emojiStruct = Emojis()
     var colorGenerated = RGBValue()
     var increment = incrementer()
     @IBOutlet weak var RGBColorView: UIView!
@@ -30,6 +32,9 @@ class ViewController: UIViewController {
         redOutlet.alpha = 0.5
         blueOutlet.alpha = 0.5
         greenOutlet.alpha = 0.5
+        
+        gameOver.alpha = 1.0
+        newGame.alpha = 1.0
         
         redOutlet.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
         blueOutlet.setTitleColor(UIColor.lightGray, for: UIControl.State.normal)
@@ -56,76 +61,67 @@ class ViewController: UIViewController {
         colorGenerated = RGBValue()
         RGBColorView.backgroundColor = colorGenerated.creatRGBColor()
     }
+    
+    func ifCaseIsTrue(){
+        increment.incrementScore()
+        increment.incrementHighScore()
+        
+        currentScore.text = "Curent Score: \(increment.score)"
+        highScore.text = "High Score: \(increment.highestScore)"
+        colorGenerator()
+        emojiLabel.alpha = 1
+        emojiStruct = Emojis()
+        emojiLabel.text = emojiStruct.happy()
+    }
+    
+    func ifCaseIsFalse(){
+        increment.score = 0
+        currentScore.text = "Curent Score: \(increment.score)"
+        emojiStruct = Emojis()
+        emojiLabel.text = emojiStruct.sad()
+    }
+    
     @IBAction func red(_ sender: UIButton) {
         switch colorGenerated.highestRGBvalue() {
         case CGFloat(colorGenerated.red):
-            
-            increment.incrementScore()
-            increment.incrementHighScore()
-            
-            currentScore.text = "Curent Score: \(increment.score)"
-            highScore.text = "High Score: \(increment.highestScore)"
-            colorGenerator()
+            ifCaseIsTrue()
         default:
-            increment.score = 0
-            currentScore.text = "Curent Score: \(increment.score)"
-            gameOver.alpha = 1.0
-            newGame.alpha = 1.0
+            ifCaseIsFalse()
             isDisabled()
         }
     }
-    
     
     @IBAction func blue(_ sender: UIButton) {
         switch colorGenerated.highestRGBvalue() {
         case CGFloat(colorGenerated.blue):
-            increment.incrementScore()
-            increment.incrementHighScore()
-            
-            currentScore.text = "Curent Score: \(increment.score)"
-            highScore.text = "High Score: \(increment.highestScore)"
-            colorGenerator()
+            ifCaseIsTrue()
         default:
-            increment.score = 0
-            currentScore.text = "Curent Score: \(increment.score)"
-            gameOver.alpha = 1.0
-            newGame.alpha = 1.0
+           ifCaseIsFalse()
             isDisabled()
         }
     }
-    
     
     @IBAction func green(_ sender: UIButton) {
         switch colorGenerated.highestRGBvalue() {
         case CGFloat(colorGenerated.green):
-            
-            increment.incrementScore()
-            increment.incrementHighScore()
-            
-            currentScore.text = "Curent Score: \(increment.score)"
-            highScore.text = "High Score: \(increment.highestScore)"
-            colorGenerator()
+           ifCaseIsTrue()
         default:
-            increment.score = 0
-            currentScore.text = "Curent Score: \(increment.score)"
-            gameOver.alpha = 1.0
-            newGame.alpha = 1.0
+           ifCaseIsFalse()
             isDisabled()
         }
     }
     
-    
     @IBAction func newGame(_ sender: UIButton) {
         isEnabled()
         colorGenerator()
-        
+         emojiLabel.alpha = 0
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         RGBColorView.backgroundColor = colorGenerated.creatRGBColor()
+        
         // Do any additional setup after loading the view.
     }
-    
-    
 }
 
